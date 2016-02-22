@@ -1,0 +1,24 @@
+{% set intro = g.site_intro_text %}
+
+<div class="module-content box">
+  <header>
+    {% if intro %}
+      {{ h.render_markdown(intro) }}
+    {% else %}
+      <h1 class="page-heading">{{ _("Welcome to CKAN") }}</h1>
+      <p>
+        {% trans %}This is a nice introductory paragraph about CKAN or the site
+        in general. We don't have any copy to go here yet but soon we will
+        {% endtrans %}
+      </p>
+    {% endif %}
+  </header>
+  <section class="featured media-overlay">
+    {% if h.birmingham_featured_caption() %}
+      <h2 class="media-heading">{{ h.birmingham_featured_caption() }}</h2>
+    {% endif %}
+    <a class="media-image" href="#">
+      <img src="{{ h.birmingham_featured_image() }}" alt="{{ h.birmingham_featured_alt_text() }}" width="420" height="220" />
+    </a>
+  </section>
+</div>

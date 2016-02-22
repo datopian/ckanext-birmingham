@@ -1,0 +1,7 @@
+.masthead .navigation .nav-pills li.active a, .masthead .nav > li > a:hover {
+  color: #2A2A2A;
+}
+
+.context-info h1.heading {
+  word-break: keep-all;
+}
